@@ -15,6 +15,7 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- Rust Debugging
 map("n", "<leader>vs", "<cmd> RustDebuggables <CR>", { desc = "Start debugging" })
 map("n", "<leader>vb", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle breakpoint" })
 map("n", "<leader>vo", "<cmd> DapStepOver <CR>", { desc = "Step Over" })
@@ -26,3 +27,8 @@ map("n", "<leader>vd", function()
   local sidebar = widgets.sidebar(widgets.scopes)
   sidebar.open()
 end, { desc = "Open debugging sidebar" })
+
+-- Rust Crates
+map("n", "<leader>rcu", function()
+  require("crates").upgrade_all_crates()
+end, { desc = "update crates" })
