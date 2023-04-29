@@ -2,3 +2,4 @@
 require("config.lazy")
 require("config.harpoon")
 require("config.lldb")
+require("config.rust-tools")
