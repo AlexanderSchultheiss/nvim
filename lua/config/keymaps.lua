@@ -18,3 +18,7 @@ end
 map("n", "<leader>rcu", function()
   require("crates").upgrade_all_crates()
 end, { desc = "update crates" })
+
+-- Change keymap of Lazy to 'L'
+vim.keymap.del("n", "<leader>l")
+map("n", "<leader>L", "<cmd>:Lazy<cr>", { desc = "Lazy" })
