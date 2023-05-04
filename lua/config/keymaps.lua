@@ -46,3 +46,6 @@ map("n", "<leader>v]R", "<Plug>(vimtex-]R)", { desc = "frame vimtex-]R" })
 
 map("n", "<leader>v[*", "<Plug>(vimtex-[*)", { desc = "comment vimtex-[*" })
 map("n", "<leader>v]*", "<Plug>(vimtex-]*)", { desc = "comment vimtex-]*" })
+
+-- undotree
+map("n", "<leader>uu", vim.cmd.UndotreeToggle, { desc = "undotree toggle " })
