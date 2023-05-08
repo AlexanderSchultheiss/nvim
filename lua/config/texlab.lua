@@ -6,7 +6,7 @@ require("lspconfig").texlab.setup({
       auxDirectory = ".",
       bibtexFormatter = "texlab",
       build = {
-        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "-shell-escape", "%f" },
         executable = "latexmk",
         forwardSearchAfter = false,
         onSave = false,
