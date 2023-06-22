@@ -44,8 +44,8 @@ map("v", "<leader>dd", '"_d', { desc = "delete into void" })
 map("n", "Q", "<nop>")
 map("n", "<S-Down>", "<cmd>cnext<CR>zz")
 map("n", "<S-Up>", "<cmd>cprev<CR>zz")
-map("n", "<leader>k", "<cmd>lnext<CR>zz")
-map("n", "<leader>j", "<cmd>lprev<CR>zz")
+map("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "next location" })
+map("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "previous location" })
 
 -- vimtex
 map("n", "<leader>v[[", "<Plug>(vimtex-[[)", { desc = "section vimtex-[[" })
