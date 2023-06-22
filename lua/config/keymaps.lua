@@ -23,6 +23,27 @@ end, { desc = "update crates" })
 vim.keymap.del("n", "<leader>l")
 map("n", "<leader>L", "<cmd>:Lazy<cr>", { desc = "Lazy" })
 
+-- ThePrimegean
+-- J without cursor move
+map("n", "J", "mzJ`z")
+-- cursor staying in the middle
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+-- paste without loosing paste buffer
+map("x", "<leader>p", '"_dP', { desc = "paste and keep buffer" })
+-- yank into system clipboard
+map("n", "<leader>y", '"+y', { desc = "yank into system clipboard" })
+map("v", "<leader>y", '"+y', { desc = "yank into system clipboard" })
+map("n", "<leader>Y", '"+Y', { desc = "yank EOL into system clipboard" })
+-- delete to void buffer
+map("n", "<leader>dd", '"_d', { desc = "delete into void" })
+map("v", "<leader>dd", '"_d', { desc = "delete into void" })
+-- misc
+map("n", "Q", "<nop>")
+map("i", "<C-c>", "<Esc>")
+
 -- vimtex
 map("n", "<leader>v[[", "<Plug>(vimtex-[[)", { desc = "section vimtex-[[" })
 map("n", "<leader>v]]", "<Plug>(vimtex-]])", { desc = "section vimtex-]]" })
