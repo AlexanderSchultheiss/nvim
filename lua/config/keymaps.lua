@@ -75,4 +75,4 @@ map("n", "<leader>v]*", "<Plug>(vimtex-]*)", { desc = "comment vimtex-]*" })
 map("n", "<leader>uu", vim.cmd.UndotreeToggle, { desc = "undotree toggle " })
 
 -- markdown-preview
-map("n", "<leader>ll", vim.cmd.MarkdownPreview, { desc = "markdown preview" })
+map("n", "<leader>ml", vim.cmd.MarkdownPreview, { desc = "markdown preview" })
