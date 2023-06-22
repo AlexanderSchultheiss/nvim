@@ -42,7 +42,10 @@ map("n", "<leader>dd", '"_d', { desc = "delete into void" })
 map("v", "<leader>dd", '"_d', { desc = "delete into void" })
 -- misc
 map("n", "Q", "<nop>")
-map("i", "<C-c>", "<Esc>")
+map("n", "<S-Down>", "<cmd>cnext<CR>zz")
+map("n", "<S-Up>", "<cmd>cprev<CR>zz")
+map("n", "<leader>k", "<cmd>lnext<CR>zz")
+map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- vimtex
 map("n", "<leader>v[[", "<Plug>(vimtex-[[)", { desc = "section vimtex-[[" })
