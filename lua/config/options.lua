@@ -8,3 +8,4 @@ local opt = vim.opt
 opt.scrolloff = 8
 opt.shiftwidth = 4
 opt.tabstop = 4
+opt.conceallevel = 0
