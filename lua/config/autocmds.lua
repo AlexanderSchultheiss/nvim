@@ -3,3 +3,9 @@
 -- Add any additional autocmds here
 
 vim.cmd("autocmd FileType * inoremap ' '")
+vim.cmd("autocmd FileType * inoremap ( (")
+vim.cmd("autocmd FileType * inoremap [ [")
+vim.cmd("autocmd FileType * inoremap < <")
+vim.cmd('autocmd FileType * inoremap " "')
+vim.cmd("autocmd FileType * inoremap { {")
+vim.cmd("autocmd FileType * inoremap ` `")
