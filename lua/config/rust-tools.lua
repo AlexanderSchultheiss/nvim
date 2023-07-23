@@ -1,4 +1,6 @@
-local function on_attach(client, buffer)
+local rt = require("rust-tools")
+
+local function on_attach(client, bufnr)
   --  local keymap_opts = { buffer = buffer }
   -- Code navigation and shortcuts
   -- vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
@@ -11,6 +13,10 @@ local function on_attach(client, buffer)
   -- vim.keymap.set("n", "gW", vim.lsp.buf.workspace_symbol, keymap_opts)
   -- vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
   -- vim.keymap.set("n", "ga", vim.lsp.buf.code_action, keymap_opts)
+  -- Hover actions
+  vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+  -- Code action groups
+  vim.keymap.set("n", "<Leader>ra", rt.code_action_group.code_action_group, { buffer = bufnr })
 
   -- Show diagnostic popup on cursor hover
   local diag_float_grp = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true })
@@ -61,20 +67,7 @@ local opts = {
   },
 }
 
-require("rust-tools").setup(opts)
-
-local rt = require("rust-tools")
-
-rt.setup({
-  server = {
-    on_attach = function(_, bufnr)
-      -- Hover actions
-      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-      -- Code action groups
-      vim.keymap.set("n", "<Leader>ra", rt.code_action_group.code_action_group, { buffer = bufnr })
-    end,
-  },
-})
+rt.setup(opts)
 
 local lspkind_comparator = function(conf)
   local lsp_types = require("cmp.types").lsp
