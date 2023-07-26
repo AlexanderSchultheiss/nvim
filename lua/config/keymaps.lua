@@ -48,6 +48,9 @@ map("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "next location" })
 map("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "previous location" })
 
 -- vimtex
+map("n", "<leader>li", "<Plug>(vimtex-info)", { desc = "vimtex info" })
+map("n", "<leader>ll", "<Plug>(vimtex-compile)", { desc = "vimtex info" })
+
 map("n", "<leader>v[[", "<Plug>(vimtex-[[)", { desc = "section vimtex-[[" })
 map("n", "<leader>v]]", "<Plug>(vimtex-]])", { desc = "section vimtex-]]" })
 map("n", "<leader>v[]", "<Plug>(vimtex-[])", { desc = "section vimtex-[]" })
