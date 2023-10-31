@@ -81,3 +81,7 @@ map("n", "<leader>uu", vim.cmd.UndotreeToggle, { desc = "undotree toggle " })
 
 -- markdown-preview
 map("n", "<leader>ml", vim.cmd.MarkdownPreview, { desc = "markdown preview" })
+
+-- chatGPT
+map("v", "<leader>ve", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit with ChatGPT" })
+map("n", "<leader>vc", "<cmd>ChatGPT<CR>", { desc = "Chat with ChatGPT" })
