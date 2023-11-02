@@ -15,4 +15,9 @@ return {
     lazy = false,
     priority = 100,
   },
+  {
+    "catppuccino/nvim",
+    lazy = false,
+    priority = 200,
+  },
 }
