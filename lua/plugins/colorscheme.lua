@@ -16,8 +16,8 @@ return {
     priority = 100,
   },
   {
-    "catppuccino/nvim",
-    lazy = false,
-    priority = 200,
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
   },
 }
