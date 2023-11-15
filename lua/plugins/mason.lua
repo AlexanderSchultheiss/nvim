@@ -7,7 +7,6 @@ return {
         "rust-analyzer",
         "codelldb",
         "lua-language-server",
-        "jedi-language-server",
         "python-lsp-server",
         "shfmt",
         "stylua",
