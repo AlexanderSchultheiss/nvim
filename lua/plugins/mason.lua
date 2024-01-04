@@ -4,7 +4,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "rust-analyzer",
         "codelldb",
         "lua-language-server",
         "python-lsp-server",

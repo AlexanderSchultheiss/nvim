@@ -1,5 +1,4 @@
 return {
-  -- rust
   {
     "rust-lang/rust.vim",
     ft = "rust",
@@ -8,38 +7,46 @@ return {
     end,
   },
   {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    --    opts = function()
-    --      return require("config.rust-tools")
-    --    end,
-    --    config = function(_, opts)
-    --      require("rust-tools").setup(opts)
-    --    end,
-  },
-  --  {
-  --    "mfussenegger/nvim-dap",
-  --  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    dependencies = "mason.nvim",
-    cmd = { "DapInstall", "DapUninstall" },
-    opts = {
-      -- Makes a best effort to setup the various debuggers with
-      -- reasonable debug configurations
-      automatic_setup = true,
-
-      -- You can provide additional configuration to the handlers,
-      -- see mason-nvim-dap README for more information
-      handlers = {},
-
-      -- You'll need to check that you have the required things installed
-      -- online, please don't ask me how to install them :)
-      ensure_installed = {
-        -- Update this to ensure that you have the debuggers for the langs you want
-        "rust",
+    "mrcjkb/rustaceanvim",
+    version = "^3",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "mfussenegger/nvim-dap",
+      {
+        "lvimuser/lsp-inlayhints.nvim",
+        opts = {},
       },
     },
+    ft = { "rust" },
+    config = function()
+      vim.g.rustaceanvim = {
+        inlay_hints = {
+          highlight = "NonText",
+        },
+        tools = {
+          hover_actions = {
+            auto_focus = true,
+          },
+        },
+        server = {
+          on_attach = function(client, bufnr)
+            require("lsp-inlayhints").on_attach(client, bufnr)
+          end,
+        },
+        settings = {
+          -- rust-analyzer language server configuration
+          ["rust-analyzer"] = {
+            check = {
+              command = "clippy",
+            },
+            -- enable clippy on save
+            checkOnSave = {
+              command = "clippy",
+            },
+          },
+        },
+      }
+    end,
   },
   {
     "saecki/crates.nvim",
