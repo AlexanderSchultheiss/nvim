@@ -32,16 +32,16 @@ return {
           on_attach = function(client, bufnr)
             require("lsp-inlayhints").on_attach(client, bufnr)
           end,
-        },
-        settings = {
-          -- rust-analyzer language server configuration
-          ["rust-analyzer"] = {
-            check = {
-              command = "clippy",
-            },
-            -- enable clippy on save
-            checkOnSave = {
-              command = "clippy",
+          settings = {
+            -- rust-analyzer language server configuration
+            ["rust-analyzer"] = {
+              check = {
+                command = "clippy",
+              },
+              -- enable clippy on save
+              checkOnSave = {
+                command = "clippy",
+              },
             },
           },
         },
