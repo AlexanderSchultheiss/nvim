@@ -3,19 +3,31 @@ vim.keymap.set("n", "<leader>ra", function()
   vim.cmd.RustLsp("codeAction")
 end, { silent = true, buffer = bufnr, desc = "code action" })
 
-vim.keymap.set("n", "<leader>rd", function()
+vim.keymap.set("n", "<leader>rdd", function()
+  vim.cmd.RustLsp({
+    "debuggables",
+  })
+end, { silent = true, buffer = bufnr, desc = "debuggables" })
+
+vim.keymap.set("n", "<leader>rdl", function()
   vim.cmd.RustLsp({
     "debuggables",
     "last" --[[ optional ]],
   })
-end, { silent = true, buffer = bufnr, desc = "debuggables" })
+end, { silent = true, buffer = bufnr, desc = "debuggables last" })
 
-vim.keymap.set("n", "<leader>rr", function()
+vim.keymap.set("n", "<leader>rrr", function()
+  vim.cmd.RustLsp({
+    "runnables",
+  })
+end, { silent = true, buffer = bufnr, desc = "runnables" })
+
+vim.keymap.set("n", "<leader>rrl", function()
   vim.cmd.RustLsp({
     "runnables",
     "last" --[[ optional ]],
   })
-end, { silent = true, buffer = bufnr, desc = "runnables" })
+end, { silent = true, buffer = bufnr, desc = "runnables last" })
 
 vim.keymap.set("n", "<leader>rm", function()
   vim.cmd.RustLsp("expandMacro")
@@ -25,14 +37,14 @@ vim.keymap.set("n", "<leader>rp", function()
   vim.cmd.RustLsp("rebuildProcMacros")
 end, { silent = true, buffer = bufnr, desc = "rebuild proc macros" })
 
-vim.keymap.set("n", "<leader>ru", function()
+vim.keymap.set("n", "<leader>rk", function()
   vim.cmd.RustLsp({ "moveItem", "up" })
 end, { silent = true, buffer = bufnr, desc = "move item up" })
 vim.keymap.set("n", "<leader>rj", function()
   vim.cmd.RustLsp({ "moveItem", "down" })
 end, { silent = true, buffer = bufnr, desc = "move item down" })
 
-vim.keymap.set("n", "<leader>rk", function()
+vim.keymap.set("n", "<leader>rh", function()
   vim.cmd.RustLsp({ "hover", "actions" })
 end, { silent = true, buffer = bufnr, desc = "hover actions" })
 
