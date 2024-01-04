@@ -42,10 +42,15 @@ map("n", "<leader>dd", '"_d', { desc = "delete into void" })
 map("v", "<leader>dd", '"_d', { desc = "delete into void" })
 -- misc
 map("n", "Q", "<nop>")
+-- navigate error list
 map("n", "<S-Down>", "<cmd>cnext<CR>zz")
 map("n", "<S-Up>", "<cmd>cprev<CR>zz")
+-- navigate location list
 map("n", "<leader>j", "<cmd>lnext<CR>zz", { desc = "next location" })
 map("n", "<leader>k", "<cmd>lprev<CR>zz", { desc = "previous location" })
+
+-- todos
+map("n", "<leader>T", "<cmd>:TodoQuickFix<CR>", { desc = "load todos into quickfix" })
 
 -- vimtex
 vim.g.vimtex_mappings_prefix = "<leader>l"
