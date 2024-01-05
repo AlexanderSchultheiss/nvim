@@ -1,3 +1,4 @@
+-- requires lcpi
 local battery = require("battery")
 battery.setup({
   update_rate_seconds = 30, -- Number of seconds between checking battery status
