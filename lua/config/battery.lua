@@ -19,5 +19,12 @@ local nvimbattery = {
 }
 
 require("lualine").setup({
-  sections = { lualine_z = { nvimbattery } },
+  sections = {
+    lualine_z = {
+      nvimbattery,
+      function()
+        return " " .. os.date("%R")
+      end,
+    },
+  },
 })
