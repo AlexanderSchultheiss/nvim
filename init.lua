@@ -11,6 +11,8 @@ require("config.battery")
 -- require("after.ftplugin.rust")
 vim.cmd("source ~/.config/nvim/vim/vimtex.vim")
 vim.cmd("source ~/.config/nvim/vim/neomake.vim")
--- vim.cmd([[colorscheme tokyonight]])
-vim.cmd("colorscheme darcula-solid")
+
+-- colorscheme
+vim.cmd([[colorscheme tokyonight]])
+-- vim.cmd("colorscheme darcula-solid")
 vim.cmd("set termguicolors")
