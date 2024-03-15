@@ -13,6 +13,7 @@ vim.cmd("source ~/.config/nvim/vim/vimtex.vim")
 vim.cmd("source ~/.config/nvim/vim/neomake.vim")
 
 -- colorscheme
-vim.cmd([[colorscheme tokyonight]])
+-- vim.cmd([[colorscheme tokyonight]])
 -- vim.cmd("colorscheme darcula-solid")
+vim.cmd("colorscheme catppuccin-mocha")
 vim.cmd("set termguicolors")
