@@ -1,14 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("config.harpoon")
--- require("config.lldb")
 require("config.texlab")
 require("config.tokyonight")
 require("config.rust")
 require("config.chatgpt")
-require("config.rustaceavim")
 require("config.battery")
--- require("after.ftplugin.rust")
 vim.cmd("source ~/.config/nvim/vim/vimtex.vim")
 vim.cmd("source ~/.config/nvim/vim/neomake.vim")
 
