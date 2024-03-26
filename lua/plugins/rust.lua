@@ -8,7 +8,6 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-    version = "^3",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "mfussenegger/nvim-dap",
