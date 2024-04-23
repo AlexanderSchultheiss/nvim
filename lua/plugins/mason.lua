@@ -10,6 +10,7 @@ return {
         "shfmt",
         "stylua",
         "json-lsp",
+        "google-java-format",
       },
     },
   },

@@ -8,6 +8,7 @@ require("config.chatgpt")
 require("config.battery")
 vim.cmd("source ~/.config/nvim/vim/vimtex.vim")
 vim.cmd("source ~/.config/nvim/vim/neomake.vim")
+require("config.java")
 
 -- colorscheme
 -- vim.cmd([[colorscheme tokyonight]])
