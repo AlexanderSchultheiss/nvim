@@ -101,3 +101,29 @@ map({ "v", "n" }, "<leader>ab", "<cmd>ChatGPTRun fix_bugs<CR>", { desc = "fix bu
 map({ "v", "n" }, "<leader>ae", "<cmd>ChatGPTRun explain_code<CR>", { desc = "explain code" })
 map({ "v", "n" }, "<leader>ax", "<cmd>ChatGPTRun rocygen_edit<CR>", { desc = "roxygen edit" })
 map({ "v", "n" }, "<leader>ar", "<cmd>ChatGPTRun code_readability_analysis<CR>", { desc = "readability analysis" })
+
+-- Java
+-- run_current_class - Run the test class in the active buffer
+map("n", "<leader>cjc", function()
+  require("java").test.run_current_class()
+end, { desc = "run current class" })
+
+-- debug_current_class - Debug the test class in the active buffer
+map("n", "<leader>cjC", function()
+  require("java").test.debug_current_class()
+end, { desc = "debug current class" })
+
+-- run_current_method - Run the test method on the cursor
+map("n", "<leader>cjm", function()
+  require("java").test.run_current_method()
+end, { desc = "run current method" })
+
+-- debug_current_method - Debug the test method on the cursor
+map("n", "<leader>cjM", function()
+  require("java").test.debug_current_method()
+end, { desc = "debug current method" })
+
+-- view_report - Open the last test report in a popup window
+map("n", "<leader>cjv", function()
+  require("java").test.view_last_report()
+end, { desc = "view last report" })
