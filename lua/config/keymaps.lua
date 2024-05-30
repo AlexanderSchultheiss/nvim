@@ -133,6 +133,9 @@ map({ "v", "n" }, "<localleader>jn", "<cmd>Neorg journal today<CR>", { desc = "e
 map({ "v", "n" }, "<localleader>jj", "<cmd>Neorg journal<CR>", { desc = "Neorg journal mode" })
 map({ "v", "n" }, "<localleader>wj", "<cmd>Neorg workspace journal<CR>", { desc = "open the journal" })
 map({ "v", "n" }, "<localleader>wr", "<cmd>Neorg return<CR>", { desc = "exit neorg workspace" })
+map({ "v", "n" }, "<localleader>im", "<cmd>Neorg inject-metadata<CR>", { desc = "inject metadata" })
+map({ "v", "n" }, "<localleader>iu", "<cmd>Neorg update-metadata<CR>", { desc = "update metadata" })
+map({ "v", "n" }, "<localleader>o", "<cmd>Neorg toc<CR>", { desc = "table of contents" })
 map({ "v", "n" }, "<localleader>ww", function()
   vim.ui.input({ prompt = "Enter Workspace Name: " }, function(input)
     if input then
@@ -140,6 +143,14 @@ map({ "v", "n" }, "<localleader>ww", function()
     end
   end)
 end, { desc = "Switch neorg workspace" })
+map({ "v", "n" }, "<localleader>ss", "<cmd>Neorg generate-workspace-summary<CR>", { desc = "Neorg workspace summary" })
+map({ "v", "n" }, "<localleader>sp", function()
+  vim.ui.input({ prompt = "Enter Category Names: " }, function(input)
+    if input then
+      vim.cmd("Neorg generate-workspace-summary " .. input)
+    end
+  end)
+end, { desc = "Neorg partial workspace summary" })
 
 -- Zenmode
 map({ "v", "n" }, "<leader>uz", "<cmd>ZenMode<CR>", { desc = "Toggle zen mode" })
