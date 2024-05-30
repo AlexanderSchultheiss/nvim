@@ -8,7 +8,7 @@ local opt = vim.opt
 opt.scrolloff = 8
 opt.shiftwidth = 4
 opt.tabstop = 4
-opt.conceallevel = 0
+opt.conceallevel = 2
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
