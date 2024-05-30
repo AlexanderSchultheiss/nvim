@@ -136,6 +136,7 @@ map({ "v", "n" }, "<localleader>wr", "<cmd>Neorg return<CR>", { desc = "exit neo
 map({ "v", "n" }, "<localleader>im", "<cmd>Neorg inject-metadata<CR>", { desc = "inject metadata" })
 map({ "v", "n" }, "<localleader>iu", "<cmd>Neorg update-metadata<CR>", { desc = "update metadata" })
 map({ "v", "n" }, "<localleader>o", "<cmd>Neorg toc<CR>", { desc = "table of contents" })
+map({ "v", "n" }, "<localleader>r", "<cmd>Neorg render-latex<CR>", { desc = "render latex" })
 map({ "v", "n" }, "<localleader>ww", function()
   vim.ui.input({ prompt = "Enter Workspace Name: " }, function(input)
     if input then
