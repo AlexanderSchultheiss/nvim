@@ -6,6 +6,12 @@ require("neorg").setup({
     ["core.ui.calendar"] = {},
     ["core.integrations.image"] = {},
     ["core.latex.renderer"] = {},
+    ["core.journal"] = { -- Manages Neorg workspaces
+      config = {
+        workspace = "journal",
+        journal_folder = "logs",
+      },
+    },
     ["core.completion"] = { -- Manages Neorg workspaces
       config = {
         engine = "nvim-cmp",
