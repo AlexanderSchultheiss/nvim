@@ -127,3 +127,19 @@ end, { desc = "debug current method" })
 map("n", "<leader>cjv", function()
   require("java").test.view_last_report()
 end, { desc = "view last report" })
+
+-- Neorg
+map({ "v", "n" }, "<localleader>jn", "<cmd>Neorg journal today<CR>", { desc = "edit today's journal" })
+map({ "v", "n" }, "<localleader>jj", "<cmd>Neorg journal<CR>", { desc = "Neorg journal mode" })
+map({ "v", "n" }, "<localleader>wj", "<cmd>Neorg workspace journal<CR>", { desc = "open the journal" })
+map({ "v", "n" }, "<localleader>wr", "<cmd>Neorg return<CR>", { desc = "exit neorg workspace" })
+map({ "v", "n" }, "<localleader>ww", function()
+  vim.ui.input({ prompt = "Enter Workspace Name: " }, function(input)
+    if input then
+      vim.cmd("Neorg workspace " .. input)
+    end
+  end)
+end, { desc = "Switch neorg workspace" })
+
+-- Zenmode
+map({ "v", "n" }, "<leader>uz", "<cmd>ZenMode<CR>", { desc = "Toggle zen mode" })
