@@ -39,8 +39,8 @@ local config = {
       configuration = {
         runtimes = {
           {
-            name = "JavaSE-22",
-            path = "/usr/lib/jvm/default/",
+            name = "JavaSE-21",
+            path = "/usr/lib/jvm/java-21-openjdk/",
             default = true,
           },
         },
