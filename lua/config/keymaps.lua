@@ -129,7 +129,6 @@ map("n", "<leader>cjv", function()
 end, { desc = "view last report" })
 
 -- Neorg
-map({ "v", "n" }, "<C-T>", "<Plug>(neorg.qol.todo-items.todo.task-cycle)", { desc = "cycle todo item states" })
 map({ "v", "n" }, "<localleader>jn", "<cmd>Neorg journal today<CR>", { desc = "edit today's journal" })
 map({ "v", "n" }, "<localleader>jj", "<cmd>Neorg journal<CR>", { desc = "Neorg journal mode" })
 map({ "v", "n" }, "<localleader>wj", "<cmd>Neorg workspace journal<CR>", { desc = "open the journal" })
